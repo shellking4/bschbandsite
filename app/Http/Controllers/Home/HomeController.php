@@ -3,16 +3,14 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FreeRentFormRequest;
-use App\Http\Requests\LoginUserRequest;
 use App\Http\Requests\PassResetFormRequest;
-use App\Http\Requests\RegisterUserRequest;
-use App\Http\Requests\RentFormRequest;
-use App\Models\Car;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Song;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Access\Response;
 
 class HomeController extends Controller
 {
@@ -61,5 +59,17 @@ class HomeController extends Controller
             return back()->with('status', 'IDENTIFIANTS DE CONNEXION INVALIDES');
         }
         return redirect()->route('worked_out_songs')->with('pass_reset_success', 'Password Successfully Reset');
+    }
+
+    public function downloadMedia(Request $request, Song $song)
+    {
+        $file = public_path() . $song->file;
+        $fileName = basename($file); 
+        $headers = ['Content-Type: */*'];
+        if (file_exists($file)) {
+            return \Response::download($file, $fileName, $headers);
+        } else {
+            echo ('File not found.');
+        }
     }
 }

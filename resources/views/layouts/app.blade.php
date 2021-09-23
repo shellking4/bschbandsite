@@ -69,12 +69,12 @@
                             <button type="submit" class="text-bolder text-white">MORCEAUX À COPIER</button>
                         </form>
                     </li>
-                    <li>
+                    <!-- <li>
                         <form class="mt-3" action="" method="get">
                             @csrf
                             <button type="submit" class="text-bolder text-white">ÉVÉNEMENTS IMPORTANTS EN VUE</button>
                         </form>
-                    </li>
+                    </li> -->
                     <!-- For Admin -->
                     @auth
                     @if (count(auth()->user()->roles) == 2)
@@ -84,12 +84,12 @@
                             <button type="submit" class="text-bolder text-white">AJOUTER UN MORCEAU À COPIER</button>
                         </form>
                     </li>
-                    <li>
+                    <!-- <li>
                         <form class="mt-3" action="" method="get">
                             @csrf
                             <button type="submit" class="text-bolder text-white">AJOUTER UN ÉVÉNEMENT IMPORTANT EN VUE</button>
                         </form>
-                    </li>
+                    </li> -->
                     @endif
                     @endauth
                 </ul>
@@ -121,10 +121,7 @@
                 </div>
                 <ul class="footer-links list-reset">
                     <li>
-                        <a style="text-decoration: none;" href="#">CONTACT</a>
-                    </li>
-                    <li>
-                        <a style="text-decoration: none;" href="#">À PROPOS</a>
+                        <a style="text-decoration: none;" href="#">donaldkant2000@gmail.com</a>
                     </li>
                     @auth
                     <li>
@@ -150,7 +147,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="footer-copyright">&copy; 2021 SYSLABS, tous droits réservés</div>
+                <div class="footer-copyright">&copy; 2021 SYSLABS LLC, tous droits réservés</div>
             </div>
         </div>
     </footer>

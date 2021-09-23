@@ -14,7 +14,7 @@
                         <p class="description">{{ $song->description }}</p>
                     </div>
                 </div>
-                <div class="footer"><a class="btn" href="{{ $song->file }}">ÉCOUTER</a><a class="btn" href="#">TÉLÉCHARGER</a></div>
+                <div class="footer"><a class="btn" href="{{ $song->file }}">ÉCOUTER</a><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div>
                 @auth
                 @if (count(auth()->user()->roles) == 2)
                 <div class="text-center mt-4">

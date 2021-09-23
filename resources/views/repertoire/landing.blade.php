@@ -154,10 +154,7 @@
                     </div>
                     <ul class="footer-links list-reset">
                         <li>
-                            <a style="text-decoration: none;" href="#">Contact</a>
-                        </li>
-                        <li>
-                            <a style="text-decoration: none;" href="#">About us</a>
+                            <a style="text-decoration: none;" href="#">donaldkant2000@gmail.com</a>
                         </li>
                     </ul>
                     <ul class="footer-social-links list-reset">
@@ -178,7 +175,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2021 SYSLABS, tous droits réservés</div>
+                    <div class="footer-copyright">&copy; 2021 SYSLABS LLC, tous droits réservés</div>
                 </div>
             </div>
         </footer>

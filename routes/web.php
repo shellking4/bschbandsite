@@ -24,3 +24,4 @@ Route::get('/repertoire/songs/workedout', [HomeController::class, 'getWorkedOutS
 Route::post('/repertoire/songs/add', [SongController::class, 'storeSong'])->name('song_add_action');
 Route::get('/bschband/admin/pass.reset', [HomeController::class, 'renderPassResetForm'])->name('pass.reset.view');
 Route::post('/bschband/admin/pass.reset/action', [HomeController::class, 'resetPassword'])->name('pass.reset.action');
+Route::get('/song/download/{song}', [HomeController::class, 'downloadMedia'])->name('song_download');
