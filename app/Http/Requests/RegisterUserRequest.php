@@ -27,7 +27,7 @@ class RegisterUserRequest extends FormRequest
             'lastname' => 'required|max:255',
             'firstname' => 'required|max:255',
             'email' => 'email|required|max:255',
-            'password' => 'required|confirmed'
+            'password' => 'required'
         ];
     }
 
@@ -40,8 +40,7 @@ class RegisterUserRequest extends FormRequest
             'firstname.max' => 'Votre prénom contient trop de caratères',
             'email.required' => 'Veullez entrer votre email',
             'email.email' => 'Veuillez entrer un email valide',
-            'password.required' => 'Veuillez spécifier votre mot de passe',
-            'password.confirmed' => 'Vos mots de passe ne correspondent pas'
+            'password.required' => 'Veuillez spécifier votre mot de passe'
         ];
     }
 }

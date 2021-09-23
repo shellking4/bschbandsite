@@ -77,7 +77,7 @@
                     <div class="features-inner section-inner has-bottom-divider">
                         <div class="features-wrap">
                             <div class="feature text-center is-revealing">
-                                <a href="{{ route('home') }}" class="feature-inner">
+                                <a href="{{ route('worked_out_songs') }}" class="feature-inner">
                                     <div class="feature-icon">
                                         <img src="images/feature-icon-01.svg" alt="Feature 01">
                                     </div>

@@ -58,13 +58,13 @@
                 </a>
                 <ul class="submenu">
                     <li>
-                        <form class="mt-3" action="" method="get">
+                        <form class="mt-3" action="{{ route('worked_out_songs') }}" method="get">
                             @csrf
                             <button type="submit" class="text-bolder text-white">MORCEAUX COPIÉS</button>
                         </form>
                     </li>
                     <li>
-                        <form class="mt-3" action="" method="get">
+                        <form class="mt-3" action="{{ route('home') }}" method="get">
                             @csrf
                             <button type="submit" class="text-bolder text-white">MORCEAUX À COPIER</button>
                         </form>

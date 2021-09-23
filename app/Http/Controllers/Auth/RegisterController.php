@@ -31,7 +31,7 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
         Auth::attempt($request->only('email', 'password'));
-        return redirect()->route('home');
+        return redirect()->route('worked_out_songs');
     }
 
     public function storeAdmin(RegisterUserRequest $request)
@@ -43,10 +43,8 @@ class RegisterController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->addRole($role);
-
         $user->save();
-
         Auth::attempt($request->only('email', 'password'));
-        return redirect()->route('home');
+        return redirect()->route('worked_out_songs');
     }
 }

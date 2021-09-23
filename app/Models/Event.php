@@ -5,22 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Song extends Model
+class Event extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $casts = [
-        'isWorkedOut' => 'boolean',
+        'isPassed' => 'boolean',
     ];
 
     protected $fillable = [
         'title',
-        'author',
+        'date',
         'description',
-        'file',
-        'isWorkedOut',
+        'isPassed',
     ];
-
 }

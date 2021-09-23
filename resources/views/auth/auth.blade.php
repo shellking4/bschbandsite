@@ -43,7 +43,7 @@
             <!-- inscription -->
             <div id="signup">
                 <h1 class="tab-title">INSCRIPTION</h1>
-                <form action="{{ route('admin@register_action') }}" method="POST">
+                <form action="{{ route('admin@register_action') }}" method="post">
                     @csrf
                     <div class="top-row">
                         <div class="field-wrap">
@@ -65,19 +65,11 @@
                         </label>
                         <input type="email" name="email" class="border rounded" required autocomplete="off" />
                     </div>
-                    <div class="top-row">
-                        <div class="field-wrap">
-                            <label>
-                                Mot de passe<span class="req">*</span>
-                            </label>
-                            <input type="password" name="password" class="border rounded" required autocomplete="off" />
-                        </div>
-                        <div class="field-wrap">
-                            <label>
-                                Confirmer le mdp<span class="req">*</span>
-                            </label>
-                            <input type="password" name="confirmPassword" class="border rounded" required autocomplete="off" />
-                        </div>
+                    <div class="field-wrap">
+                        <label>
+                            Mot de passe<span class="req">*</span>
+                        </label>
+                        <input type="password" name="password" class="border rounded" required autocomplete="off" />
                     </div>
                     <button type="submit" class="btn btn-success text-white rounded button-block" />S'INSCRIRE</button>
                 </form>
