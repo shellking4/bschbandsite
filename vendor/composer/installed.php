@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '742f57d34d914e03639eb8b00eedd28a79511d58',
+    'reference' => '5356e190f9c1333e19a728f753c2984c26df9963',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -196,6 +196,15 @@
       ),
       'reference' => 'df7933820090489623ce0be5e85c7e693638e536',
     ),
+    'firebase/php-jwt' => 
+    array (
+      'pretty_version' => 'v5.4.0',
+      'version' => '5.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd2113d9b2e0e349796e72d2a63cf9319100382d2',
+    ),
     'fruitcake/laravel-cors' => 
     array (
       'pretty_version' => 'v2.0.3',
@@ -204,6 +213,33 @@
       array (
       ),
       'reference' => '01de0fe5f71c70d1930ee9a80385f9cc28e0f63a',
+    ),
+    'google/apiclient' => 
+    array (
+      'pretty_version' => 'v2.11.0',
+      'version' => '2.11.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7db9eb40c8ba887e81c0fe84f2888a967396cdfb',
+    ),
+    'google/apiclient-services' => 
+    array (
+      'pretty_version' => 'v0.213.0',
+      'version' => '0.213.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '260311821505438eb9208b068da0d849b8ea9baa',
+    ),
+    'google/auth' => 
+    array (
+      'pretty_version' => 'v1.18.0',
+      'version' => '1.18.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '21dd478e77b0634ed9e3a68613f74ed250ca9347',
     ),
     'graham-campbell/result-type' => 
     array (
@@ -499,7 +535,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '742f57d34d914e03639eb8b00eedd28a79511d58',
+      'reference' => '5356e190f9c1333e19a728f753c2984c26df9963',
     ),
     'laravel/sail' => 
     array (
@@ -536,6 +572,15 @@
       array (
       ),
       'reference' => '9be3b16c877d477357c015cec057548cf9b2a14a',
+    ),
+    'league/flysystem-cached-adapter' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd1925efb2207ac4be3ad0c40b8277175f99ffaff',
     ),
     'league/mime-type-detection' => 
     array (
@@ -584,6 +629,24 @@
         0 => '1.10.2',
       ),
     ),
+    'nao-pon/flysystem-cached-extra' => 
+    array (
+      'pretty_version' => '1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '189abdafa0a86d92781e148ee8740ef80f4c5859',
+    ),
+    'nao-pon/flysystem-google-drive' => 
+    array (
+      'pretty_version' => '1.1.13',
+      'version' => '1.1.13.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bb812339ecf06540ed096f71403f10fcbcc590f3',
+    ),
     'nesbot/carbon' => 
     array (
       'pretty_version' => '2.45.1',
@@ -619,6 +682,24 @@
       array (
       ),
       'reference' => '943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5',
+    ),
+    'paragonie/constant_time_encoding' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c',
+    ),
+    'paragonie/random_compat' => 
+    array (
+      'pretty_version' => 'v9.99.100',
+      'version' => '9.99.100.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
     ),
     'phar-io/manifest' => 
     array (
@@ -692,6 +773,15 @@
       ),
       'reference' => '994ecccd8f3283ecf5ac33254543eb0ac946d525',
     ),
+    'phpseclib/phpseclib' => 
+    array (
+      'pretty_version' => '3.0.10',
+      'version' => '3.0.10.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '62fcc5a94ac83b1506f52d7558d828617fac9187',
+    ),
     'phpspec/prophecy' => 
     array (
       'pretty_version' => '1.12.2',
@@ -754,6 +844,15 @@
       array (
       ),
       'reference' => 'f661659747f2f87f9e72095bb207bceb0f151cb4',
+    ),
+    'psr/cache' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd11b50ad223250cf17b86e38383413f5a6764bf8',
     ),
     'psr/container' => 
     array (
