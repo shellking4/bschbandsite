@@ -26,7 +26,6 @@ class SongController extends Controller
     }
 
     public function storeSong(SongCreateRequest $request) {
-
         $file = $request->file('file');
         $filename = $file->getClientOriginalName();
         $file->storeAs(
