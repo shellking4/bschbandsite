@@ -18,13 +18,6 @@
                 @auth
                 @if (count(auth()->user()->roles) == 2)
                 <div class="text-center mt-4">
-                    <form action="{{ route('mark_as_workedout', $song) }}">
-                        <button class="btn text-light rounded-2 btn-success">
-                            Marquer Copiée
-                        </button>
-                    </form>
-                </div>
-                <div class="text-center mt-4">
                     <form action="{{ route('song_delete', $song) }}">
                         @csrf
                         @method('DELETE')
