@@ -45,6 +45,6 @@ class RegisterController extends Controller
         $user->addRole($role);
         $user->save();
         Auth::attempt($request->only('email', 'password'));
-        return redirect()->route('worked_out_songs');
+        return redirect()->route('home');
     }
 }

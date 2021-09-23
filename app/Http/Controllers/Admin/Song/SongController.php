@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\Song;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SongCreateRequest;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Song;
 
 class SongController extends Controller
@@ -26,17 +26,35 @@ class SongController extends Controller
     }
 
     public function storeSong(SongCreateRequest $request) {
-        
-        $filePath = $request->file('file');
-        $fileName = $filePath->getClientOriginalName();
-        $path = $request->file('file')->storeAs('songs', $fileName, 'public');
-        $file = '/storage/' . $path;
-        
+
+        $file = $request->file('file');
+        $filename = $file->getClientOriginalName();
+        $file->storeAs(
+            '',
+            $filename,
+            'main_google_drive'
+        );
+        $dir = '/';
+        $recursive = false; 
+        $contents = collect(Storage::cloud()->listContents($dir, $recursive));
+        $file = $contents
+            ->where('type', '=', 'file')
+            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
+            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
+            ->first(); 
+        $service = Storage::cloud()->getAdapter()->getService();
+        $permission = new \Google_Service_Drive_Permission();
+        $permission->setRole('reader');
+        $permission->setType('anyone');
+        $permission->setAllowFileDiscovery(false);
+        $permissions = $service->permissions->create($file['basename'], $permission);
+        $url = Storage::cloud()->url($file['path']);
         Song::create([
             'title' => $request->title,
             'author' => $request->author,
             'description' => $request->description,
-            'file' => $file,
+            'file' => $url,
+            'filename' => $filename
         ]);
         return redirect()->route('home')->with('add_success', "succesfully added an element");
     }
@@ -59,6 +77,16 @@ class SongController extends Controller
 
     public function delete(Song $song)
     {
+        $filename = $song->filename;
+        $dir = '/';
+        $recursive = false; 
+        $contents = collect(Storage::cloud()->listContents($dir, $recursive));
+        $file = $contents
+            ->where('type', '=', 'file')
+            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
+            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
+            ->first(); 
+        Storage::cloud()->delete($file['path']);
         $song->delete();
         return back()->with('delete_success', "successfully deleted an element");
     }

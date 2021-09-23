@@ -21,6 +21,7 @@ class CreateSongsTable extends Migration
             $table->string('description');
             $table->boolean('isWorkedOut')->default(false);
             $table->string('file');
+            $table->string('filename');
         });
     }
 

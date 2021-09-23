@@ -19,6 +19,7 @@ class Song extends Model
         'title',
         'author',
         'description',
+        'filename',
         'file',
         'isWorkedOut',
     ];

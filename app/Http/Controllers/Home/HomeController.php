@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Song;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use Illuminate\Auth\Access\Response;
 
 class HomeController extends Controller
 {
@@ -26,17 +25,17 @@ class HomeController extends Controller
     }
 
     public function render_home_page() {
-        $matchThis = ['isWorkedOut' => false];
+        $matchThis = ['isWorkedOut' => true];
         $songs = Song::where($matchThis)->get();
         return view('repertoire.home', [
             'songs' => $songs
         ]);
     }
 
-    public function getWorkedOutSongs() {
-        $matchThis = ['isWorkedOut' => true];
+    public function getUnworkedOutSongs() {
+        $matchThis = ['isWorkedOut' => false];
         $songs = Song::where($matchThis)->get();
-        return view('repertoire.workedout', [
+        return view('repertoire.unworkedout', [
             'songs' => $songs
         ]);
     }

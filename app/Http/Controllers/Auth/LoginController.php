@@ -23,6 +23,6 @@ class LoginController extends Controller
         if (!Auth::attempt($request->only('email', 'password'))) {
             return back()->with('status', 'IDENTIFIANTS DE CONNEXION INVALIDES');
         }
-        return redirect()->route('worked_out_songs');
+        return redirect()->route('home');
     }
 }

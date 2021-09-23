@@ -20,7 +20,7 @@ Route::get('/repertoire/songs', [SongController::class, 'index'])->name('songs@r
 Route::get('/repertoire/songs/add', [SongController::class, 'renderAddForm'])->name('song_add_view');
 Route::get('/repertoire/songs/delete/{song}', [SongController::class, 'delete'])->name('song_delete');
 Route::get('/repertoire/songs/setworkedout/{song}', [SongController::class, 'markAsWorkedOut'])->name('mark_as_workedout');
-Route::get('/repertoire/songs/workedout', [HomeController::class, 'getWorkedOutSongs'])->name('worked_out_songs');
+Route::get('/repertoire/songs/unworkedout', [HomeController::class, 'getUnworkedOutSongs'])->name('unworked_out_songs');
 Route::post('/repertoire/songs/add', [SongController::class, 'storeSong'])->name('song_add_action');
 Route::get('/bschband/admin/pass.reset', [HomeController::class, 'renderPassResetForm'])->name('pass.reset.view');
 Route::post('/bschband/admin/pass.reset/action', [HomeController::class, 'resetPassword'])->name('pass.reset.action');

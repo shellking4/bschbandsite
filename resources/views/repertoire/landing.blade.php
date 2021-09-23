@@ -77,7 +77,7 @@
                     <div class="features-inner section-inner has-bottom-divider">
                         <div class="features-wrap">
                             <div class="feature text-center is-revealing">
-                                <a href="{{ route('worked_out_songs') }}" class="feature-inner">
+                                <a href="{{ route('home') }}" class="feature-inner">
                                     <div class="feature-icon">
                                         <img src="images/feature-icon-01.svg" alt="Feature 01">
                                     </div>
@@ -86,7 +86,7 @@
                                 </a>
                             </div>
                             <div class="feature text-center is-revealing">
-                                <a href="{{ route('home') }}" class="feature-inner">
+                                <a href="{{ route('unworked_out_songs') }}" class="feature-inner">
                                     <div class="feature-icon">
                                         <img src="images/feature-icon-02.svg" alt="Feature 02">
                                     </div>
@@ -94,7 +94,7 @@
                                     <p class="text-sm mb-0">Cette section présente les morceaux qui sont en cours de copie</p>
                                 </a>
                             </div>
-                            <a href="{{ route('home') }}" class="feature text-center is-revealing">
+                            <!-- <a href="{{ route('home') }}" class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
                                         <img src="images/feature-icon-04.svg" alt="Feature 04">
@@ -102,7 +102,7 @@
                                     <h4 class="feature-title mt-24">EVÉNEMENTS EN VUE</h4>
                                     <p class="text-sm mb-0">Cette section présente les évenements importants pour lesquels le groupe doit se préparer</p>
                                 </div>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>

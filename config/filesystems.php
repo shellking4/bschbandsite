@@ -15,6 +15,8 @@ return [
 
     'default' => env('FILESYSTEM_DRIVER', 'local'),
 
+    'cloud' => env('FILESYSTEM_CLOUD', 'main_google_drive'),
+
     /*
     |--------------------------------------------------------------------------
     | Filesystem Disks
@@ -52,7 +54,7 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
-        'main_google' => [
+        'main_google_drive' => [
             'driver' => 'google',
             'clientId' => env('MAIN_GOOGLE_DRIVE_CLIENT_ID'),
             'clientSecret' => env('MAIN_GOOGLE_DRIVE_CLIENT_SECRET'),
@@ -60,7 +62,7 @@ return [
             'folderId' => env('MAIN_GOOGLE_DRIVE_FOLDER_ID'),
         ],
 
-        'backup_google' => [
+        'backup_google_drive' => [
             'driver' => 'google',
             'clientId' => env('BACKUP_GOOGLE_DRIVE_CLIENT_ID'),
             'clientSecret' => env('BACKUP_GOOGLE_DRIVE_CLIENT_SECRET'),

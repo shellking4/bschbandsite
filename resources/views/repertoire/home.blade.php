@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-md-6 col-12 offset-md-3 ml-3">
                 <div class="card">
-                    <h5 class="text-center text-dark">AUCUN MORCEAU EN COURS DE COPIE</h5>
+                    <h5 class="text-center text-dark">AUCUN MORCEAU COPIE</h5>
                 </div>
             </div>
         </div>

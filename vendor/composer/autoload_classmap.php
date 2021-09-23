@@ -38,6 +38,8 @@ return array(
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
+    'App\\Providers\\GoogleDriveAdapter' => $baseDir . '/app/Providers/GoogleDriveAdapter.php',
+    'App\\Providers\\GoogleDriveServiceProvider' => $baseDir . '/app/Providers/GoogleDriveServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Role\\UserRole' => $baseDir . '/app/Role/UserRole.php',
     'App\\Util\\Value' => $baseDir . '/app/Util/Value.php',
