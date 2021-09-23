@@ -108,7 +108,7 @@
                 </div>
             </section>
 
-            <section class="pricing section">
+            <!-- <section class="pricing section">
                 <div class="container-sm">
                     <div class="pricing-inner section-inner">
                         <div class="pricing-header text-center">
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main>
         <footer class="site-footer">
             <div class="container">
