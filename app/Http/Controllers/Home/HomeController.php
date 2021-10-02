@@ -62,14 +62,18 @@ class HomeController extends Controller
 
     public function downloadMedia(Request $request, Song $song)
     {
-        $file = $song->file;
         $filename = $song->filename; 
-        // dd($filename);
-        $headers = ['Content-Type: */*'];
-        return \Response::download($file, $filename, $headers);
-        // if (file_exists($file)) {
-        // } else {
-        //     echo ('File not found.');
-        // }
+        $dir = '/';
+        $recursive = false; 
+        $contents = collect(Storage::cloud()->listContents($dir, $recursive));
+        $file = $contents
+            ->where('type', '=', 'file')
+            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
+            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
+            ->first();
+        $rawData = Storage::cloud()->get($file['path']);
+        return response($rawData, 200)
+            ->header('ContentType', $file['mimetype'])
+            ->header('Content-Disposition', "attachment; filename='$filename'");
     }
 }
