@@ -63,6 +63,7 @@ class HomeController extends Controller
     public function downloadMedia(Request $request, Song $song)
     {
         $file = $song->file;
+        dd($file);
         $filename = $song->filename; 
         $headers = ['Content-Type: */*'];
         if (file_exists($file)) {
