@@ -64,7 +64,7 @@ class HomeController extends Controller
     {
         $file = $song->file;
         $filename = $song->filename; 
-        dd($filename);
+        // dd($filename);
         $headers = ['Content-Type: */*'];
         return \Response::download($file, $filename, $headers);
         // if (file_exists($file)) {
