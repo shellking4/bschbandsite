@@ -58,11 +58,6 @@ class SongController extends Controller
         return redirect()->route('home')->with('add_success', "succesfully added an element");
     }
 
-    public function renderUpdateForm()
-    {
-        
-    }
-
     public function update()
     {
         
