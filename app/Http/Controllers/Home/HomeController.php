@@ -74,6 +74,6 @@ class HomeController extends Controller
         $rawData = Storage::cloud()->get($file['path']);
         return response($rawData, 200)
             ->header('ContentType', $file['mimetype'])
-            ->header('Content-Disposition', "attachment; filename='$filename'");
+            ->header('Content-Disposition', "attachment; filename=$filename");
     }
 }
