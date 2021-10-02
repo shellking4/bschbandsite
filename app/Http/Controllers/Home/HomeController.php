@@ -66,10 +66,10 @@ class HomeController extends Controller
         $filename = $song->filename; 
         dd($filename);
         $headers = ['Content-Type: */*'];
-        if (file_exists($file)) {
-            return \Response::download($file, $filename, $headers);
-        } else {
-            echo ('File not found.');
-        }
+        return \Response::download($file, $filename, $headers);
+        // if (file_exists($file)) {
+        // } else {
+        //     echo ('File not found.');
+        // }
     }
 }
