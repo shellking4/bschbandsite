@@ -62,11 +62,11 @@ class HomeController extends Controller
 
     public function downloadMedia(Request $request, Song $song)
     {
-        $file = public_path() . $song->file;
-        $fileName = basename($file); 
+        $file = $song->file;
+        $filename = $song->filename; 
         $headers = ['Content-Type: */*'];
         if (file_exists($file)) {
-            return \Response::download($file, $fileName, $headers);
+            return \Response::download($file, $filename, $headers);
         } else {
             echo ('File not found.');
         }
