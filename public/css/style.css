@@ -224,7 +224,7 @@ ul li .submenu::-webkit-scrollbar-thumb {
 }
 
 .container-audio {
-    width: 100%;
+    width: 75%;
     padding: 7px;
     border-radius: 5px;
     color: #444;
@@ -232,5 +232,5 @@ ul li .submenu::-webkit-scrollbar-thumb {
     overflow: hidden;
 }
 audio {
-  width: 100%;
+  width: 75%;
 }
