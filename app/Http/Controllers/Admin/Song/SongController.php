@@ -27,33 +27,34 @@ class SongController extends Controller
 
     public function storeSong(SongCreateRequest $request) {
         $file = $request->file('file');
-        $filename = $file->getClientOriginalName();
-        $file->storeAs(
-            '',
-            $filename,
-            'main_google_drive'
-        );
+        // $filename = $file->getClientOriginalName();
+        // $file->storeAs(
+        //     '',
+        //     $filename,
+        //     'main_google_drive'
+        // );
         $dir = '/';
         $recursive = false; 
-        $contents = collect(Storage::cloud()->listContents($dir, $recursive));
-        $file = $contents
-            ->where('type', '=', 'file')
-            ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
-            ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
-            ->first(); 
-        $service = Storage::cloud()->getAdapter()->getService();
-        $permission = new \Google_Service_Drive_Permission();
-        $permission->setRole('reader');
-        $permission->setType('anyone');
-        $permission->setAllowFileDiscovery(false);
-        $permissions = $service->permissions->create($file['basename'], $permission);
-        $url = Storage::cloud()->url($file['path']);
+        //$contents = collect(Storage::cloud()->listContents($dir, $recursive));
+        // $file = $contents
+        //     ->where('type', '=', 'file')
+        //     ->where('filename', '=', pathinfo($filename, PATHINFO_FILENAME))
+        //     ->where('extension', '=', pathinfo($filename, PATHINFO_EXTENSION))
+        //     ->first(); 
+        // $service = Storage::cloud()->getAdapter()->getService();
+        // $permission = new \Google_Service_Drive_Permission();
+        // $permission->setRole('reader');
+        // $permission->setType('anyone');
+        // $permission->setAllowFileDiscovery(false);
+        // $permissions = $service->permissions->create($file['basename'], $permission);
+        //$url = Storage::cloud()->url($file['path']);
+        $url = "";
         Song::create([
             'title' => $request->title,
             'author' => $request->author,
             'description' => $request->description,
             'file' => $url,
-            'filename' => $filename
+            'filename' => $file
         ]);
         return redirect()->route('home')->with('add_success', "succesfully added an element");
     }
