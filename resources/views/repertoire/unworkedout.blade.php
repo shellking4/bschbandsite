@@ -15,7 +15,12 @@
                         <p class="description">Par : {{ $song->author }}</p>
                     </div>
                 </div>
-                <div class="footer"><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div>
+                <div class="text-center"><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div>
+                <div class="ml-1 mt-3">
+                    <audio controls>
+                        <source src="{{ $song->file }}">
+                    </audio>
+                </div>
                 @auth
                 @if (count(auth()->user()->roles) == 2)
                 <div class="text-center mt-4">
