@@ -16,6 +16,11 @@
                     </div>
                 </div>
                 <div class="text-center"><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div>
+                <div class="text-center">
+                    <audio controls autoplay>
+                        <source src="{{ $song->file }}" type="audio/*">
+                    </audio>
+                </div>
                 @auth
                 @if (count(auth()->user()->roles) == 2)
                 <div class="text-center mt-4">
