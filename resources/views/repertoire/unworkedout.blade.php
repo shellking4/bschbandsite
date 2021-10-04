@@ -17,7 +17,7 @@
                 </div>
                 <div class="text-center"><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div>
                 <div class="ml-4">
-                    <audio controls autoplay>
+                    <audio controls>
                         <source src="{{ $song->file }}">
                     </audio>
                 </div>
