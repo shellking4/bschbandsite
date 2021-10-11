@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class $CLASS$ extends Migration
+class UpdateSong extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class $CLASS$ extends Migration
      */
     public function up()
     {
-        $UP$
+        Schema::table('songs', function (Blueprint $table) {
+            $table->text('description')->nullable()->change();
+            $table->string('key');
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class $CLASS$ extends Migration
      */
     public function down()
     {
-        $DOWN$
+        //
     }
 }

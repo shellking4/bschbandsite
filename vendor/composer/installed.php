@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f7302cf435615bf782326563ed4fd40389ce29f5',
+    'reference' => '541bee38b5d0b7ab0e325e0a4696b55690605a9c',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -38,6 +38,15 @@
       ),
       'reference' => 'dff976c2f3487d42c1db75a3b180e2b9f0e72ce0',
     ),
+    'composer/package-versions-deprecated' => 
+    array (
+      'pretty_version' => '1.11.99.4',
+      'version' => '1.11.99.4',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b174585d1fe49ceed21928a945138948cb394600',
+    ),
     'cordoval/hamcrest-php' => 
     array (
       'replaced' => 
@@ -63,21 +72,30 @@
     ),
     'doctrine/cache' => 
     array (
-      'pretty_version' => '1.10.2',
-      'version' => '1.10.2.0',
+      'pretty_version' => '2.1.1',
+      'version' => '2.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '13e3381b25847283a91948d04640543941309727',
+      'reference' => '331b4d5dbaeab3827976273e9356b3b453c300ce',
     ),
     'doctrine/dbal' => 
     array (
-      'pretty_version' => '2.12.1',
-      'version' => '2.12.1.0',
+      'pretty_version' => '3.1.3',
+      'version' => '3.1.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'adce7a954a1c2f14f85e94aed90c8489af204086',
+      'reference' => '96b0053775a544b4a6ab47654dac0621be8b4cf8',
+    ),
+    'doctrine/deprecations' => 
+    array (
+      'pretty_version' => 'v0.5.3',
+      'version' => '0.5.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9504165960a1f83cc1480e2be1dd0a0478561314',
     ),
     'doctrine/event-manager' => 
     array (
@@ -503,15 +521,6 @@
         0 => 'v8.29.0',
       ),
     ),
-    'kitloong/laravel-migrations-generator' => 
-    array (
-      'pretty_version' => '4.4.2',
-      'version' => '4.4.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '15b36cbf38019bf5d96dd960c7a865fa5f931d48',
-    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
@@ -535,7 +544,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f7302cf435615bf782326563ed4fd40389ce29f5',
+      'reference' => '541bee38b5d0b7ab0e325e0a4696b55690605a9c',
     ),
     'laravel/sail' => 
     array (
@@ -673,6 +682,13 @@
       array (
       ),
       'reference' => 'aca63581f380f63a492b1e3114604e411e39133a',
+    ),
+    'ocramius/package-versions' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '1.11.99',
+      ),
     ),
     'opis/closure' => 
     array (

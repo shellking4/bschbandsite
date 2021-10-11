@@ -19,6 +19,7 @@ class Song extends Model
         'title',
         'author',
         'description',
+        'key',
         'filename',
         'file',
         'isWorkedOut',
