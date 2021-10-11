@@ -14,7 +14,7 @@ class UpdateSongsFieldKey extends Migration
     public function up()
     {
         Schema::table('songs', function (Blueprint $table) {
-            $table->string('key');
+            $table->string('key')->nullable(false)->change();
         });
     }
 
