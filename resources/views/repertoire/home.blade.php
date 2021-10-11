@@ -16,7 +16,7 @@
                         <p class="description">Par : {{ $song->author }}</p>
                     </div>
                 </div>
-                <div class="text-center"><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div>
+                <!-- <div class="text-center"><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div> -->
                 <div class="container-audio">
                     <audio controls>
                         <source src="{{ $song->file }}">
