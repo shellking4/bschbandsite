@@ -38,13 +38,13 @@
                         <label>
                             Tonalité du chant<span class="req">*</spanform-title>
                         </label>
-                        <input type="text" name="author" class="border rounded form-control text-white bg-dark" required autocomplete="off" />
+                        <input type="text" name="key" class="border rounded form-control text-white bg-dark" required autocomplete="off" />
                     </div>
                     <div class="field-wrap">
                         <input type="file" name="file" class="border rounded form-control text-white bg-dark" required autocomplete="off" />
                     </div>
                     <div class="field-wrap">
-                        <textarea type="description" name="description" class="border rounded text-white form-control bg-dark" required autocomplete="off"></textarea>
+                        <textarea type="description" name="description" class="border rounded text-white form-control bg-dark" autocomplete="off"></textarea>
                         <div class="mt-2">
                             Description du chant
                         </div>

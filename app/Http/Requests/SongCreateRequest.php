@@ -27,6 +27,7 @@ class SongCreateRequest extends FormRequest
             'title' => 'required',
             'author' => 'required',
             'description' => '',
+            'key' => 'required',
             'file' => 'required|file'
         ];
     }
@@ -37,6 +38,7 @@ class SongCreateRequest extends FormRequest
             'title.required' => 'Veuillez entre le titre du morceau',
             'author.required' => 'Veuillez entrer l\'auteur du morceau',
             'author.required' => '',
+            'key.required' => 'Veuillez entrer la tonalité du morceau',
             'file.required' => 'Veuillez uploader le fichier du morceau',
         ];
     }

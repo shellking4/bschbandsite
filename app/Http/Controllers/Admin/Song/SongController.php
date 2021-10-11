@@ -52,6 +52,7 @@ class SongController extends Controller
             'title' => $request->title,
             'author' => $request->author,
             'description' => $request->description,
+            'key' => $request->key,
             'file' => $url,
             'filename' => $filename
         ]);
