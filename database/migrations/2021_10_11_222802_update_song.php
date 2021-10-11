@@ -15,7 +15,7 @@ class UpdateSong extends Migration
     {
         Schema::table('songs', function (Blueprint $table) {
             $table->text('description')->nullable()->change();
-            $table->string('key');
+            $table->string('key')->nullable();
         });
     }
 
