@@ -35,6 +35,12 @@
                         <input type="text" name="author" class="border rounded form-control text-white bg-dark" required autocomplete="off" />
                     </div>
                     <div class="field-wrap">
+                        <label>
+                            Tonalité du chant<span class="req">*</spanform-title>
+                        </label>
+                        <input type="text" name="author" class="border rounded form-control text-white bg-dark" required autocomplete="off" />
+                    </div>
+                    <div class="field-wrap">
                         <input type="file" name="file" class="border rounded form-control text-white bg-dark" required autocomplete="off" />
                     </div>
                     <div class="field-wrap">
