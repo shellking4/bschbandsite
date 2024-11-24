@@ -1,9 +1,20 @@
 {
     "version": 2,
     "builds": [
-        { "src": "/api/index.php", "use": "vercel-php@0.7.1" },
-        { "src": "/public/**", "use": "@vercel/static" }
+        {
+            "src": "/api/index.php",
+            "use": "vercel-php@0.6.1"
+        },
+        {
+            "src": "/public/**",
+            "use": "@vercel/static"
+        }
     ],
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.6.1"
+        }
+    },
     "routes": [
         {
             "src": "/(css|js|images|fonts|vendor|assets|build)/(.*)",
@@ -27,7 +38,7 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-        "DB_CONNECTION": "pgsql",
+        "DB_CONNECTION": "psql",
         "DB_URL": "postgresql://neondb_owner:5EjogyTRWN2a@ep-shy-mouse-a4qn407u.us-east-1.aws.neon.tech/neondb?sslmode=require"
     }
 }
