@@ -32,6 +32,6 @@
         "DB_PORT": "5432",
         "DB_DATABASE": "neondb",
         "DB_USERNAME": "neondb_owner",
-        "DB_PASSWORD": "5EjogyTRWN2a"
+        "DB_PASSWORD": "endpoint=ep-shy-mouse-a4qn407u;5EjogyTRWN2a"
     }
 }
