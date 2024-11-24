@@ -27,11 +27,7 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-        "DB_CONNECTION": "pgsql",
-        "DB_HOST": "ep-shy-mouse-a4qn407u.us-east-1.aws.neon.tech",
-        "DB_PORT": "5432",
-        "DB_DATABASE": "neondb",
-        "DB_USERNAME": "neondb_owner",
-        "DB_PASSWORD": "5EjogyTRWN2a"
+        "DB_CONNECTION": "psql",
+        "DB_URL": "postgresql://neondb_owner:5EjogyTRWN2a@ep-shy-mouse-a4qn407u.us-east-1.aws.neon.tech/neondb?sslmode=require"
     }
 }
