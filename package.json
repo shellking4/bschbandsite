@@ -4,6 +4,9 @@
   "description": "This is a js used in the project",
   "main": "none",
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "directories": {
     "test": "tests"
   },
