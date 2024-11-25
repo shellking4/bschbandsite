@@ -22,11 +22,11 @@
             <div class="container">
                 <div class="site-header-inner">
                     <div class="brand header-brand">
-                        <h1 class="m-0">
+                        <!-- <h1 class="m-0">
                             <a href="#">
                                 <img class="header-logo-image" src="images/logoImage2.png" alt="Logo">
                             </a>
-                        </h1>
+                        </h1> -->
                     </div>
                     <div class="brand header-brand">
                         <h1 class="m-0">
@@ -36,11 +36,11 @@
                         </h1>
                     </div>
                     <div class="brand header-brand">
-                        <h1 class="m-0">
+                        <!-- <h1 class="m-0">
                             <a href="#">
                                 <img class="header-logo-image" src="images/logoImage2.png" alt="Logo">
                             </a>
-                        </h1>
+                        </h1> -->
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <div class="container">
                     <div class="hero-inner">
                         <div class="hero-copy">
-                            <h1 class="hero-title mt-0">LE GROUPE MUSICAL D'ILÉ-OFÈ</h1>
+                            <h1 class="hero-title mt-0">LE GROUPE MUSICAL DE LA CHORALE</h1>
                             <p class="hero-paragraph">Un groupe de jeunes musiciens instrumentistes et chanteurs travaillant ardument et zélés pour le Seigneur Dieu</p>
                         </div>
                         <div class="hero-figure anime-element">
@@ -108,7 +108,7 @@
                 </div>
             </section>
 
-            <!-- <section class="pricing section">
+            <section class="pricing section">
                 <div class="container-sm">
                     <div class="pricing-inner section-inner">
                         <div class="pricing-header text-center">
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
         </main>
         <footer class="site-footer">
             <div class="container">

@@ -11,8 +11,9 @@ class Utils {
      */
     public static function getDirectDownloadLink($originalLink) {
         // Extract file ID from shareable link
-        preg_match('/\/d\/([^\/]+)/', $originalLink, $matches);
-        $fileId = $matches[1] ?? null;
+        preg_match('/id=([^&]+)/', $originalLink, $matches);
+        
+        $fileId = $matches[1];
         
         // Create direct download link
         $googleDriveApiKey = 'AIzaSyCeMLcKmACqBHfR8euVzdJGdVF7aZE3NDE';

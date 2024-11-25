@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Home\HomeController;
 
-Route::get('/register', [RegisterController::class, 'index'])->name('user@register_view');
+Route::get('/auth', [RegisterController::class, 'index'])->name('user@register_view');
 Route::post('/register', [RegisterController::class, 'storeUser'])->name('user@register_action');
 Route::post('/admin/register', [RegisterController::class, 'storeAdmin'])->name('admin@register_action');
 Route::get('/', [HomeController::class, 'index'])->name('landing');

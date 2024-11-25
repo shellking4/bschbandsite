@@ -25,11 +25,11 @@
         <div class="container">
             <div class="site-header-inner">
                 <div class="brand header-brand">
-                    <h1 class="m-0">
+                    <!-- <h1 class="m-0">
                         <a href="#">
                             <img class="header-logo-image" src="{{ asset('images/logoImage2.png') }}" alt="Logo">
                         </a>
-                    </h1>
+                    </h1> -->
                 </div>
                 <div class="brand header-brand">
                     <h1 class="m-0">
@@ -39,11 +39,11 @@
                     </h1>
                 </div>
                 <div class="brand header-brand">
-                    <h1 class="m-0">
+                    <!-- <h1 class="m-0">
                         <a href="#">
                             <img class="header-logo-image" src="{{ asset('images/logoImage2.png') }}" alt="Logo">
                         </a>
-                    </h1>
+                    </h1> -->
                 </div>
             </div>
         </div>

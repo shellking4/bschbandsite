@@ -18,7 +18,7 @@
                 </div>
                 <!-- <div class="text-center"><a class="btn" href="{{ route('song_download', $song) }}">TÉLÉCHARGER</a></div> -->
                 <div class="container-audio">
-                    <audio controls>
+                    <audio class="audio-player" id={{ $song->key }} controls>
                         <source src="{{ $song->file }}">
                         Your browser does not Support the audio Tag
                     </audio>
@@ -41,7 +41,7 @@
         @endforeach
         @else
         <div class="row">
-            <div class="col-md-6 col-12 offset-md-3 ml-3">
+            <div class="col-md-6 col-12 offset-md-3 ml-3" style="margin-top: 4em">
                 <div class="card">
                     <h5 class="text-center text-dark">AUCUN MORCEAU COPIE</h5>
                 </div>
@@ -51,3 +51,20 @@
     </div>
 </div>
 @endsection
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const players = document.getElementsByClassName('audio-player');
+    
+    for(let i = 0; i < players.length; i++) {
+        players[i].addEventListener('play', function() {
+            // Pause all other players
+            for(let j = 0; j < players.length; j++) {
+                if(i !== j && !players[j].paused) {
+                    players[j].pause();
+                }
+            }
+        });
+    }
+});
+</script>
