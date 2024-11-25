@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Song;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use App\Util\Utils;
 
 class HomeController extends Controller
 {
@@ -19,6 +20,9 @@ class HomeController extends Controller
         
     }
 
+    // variables to pass to the view
+    public $gDriveApiKey = '';
+
     public function index()
     {
         return view('repertoire.landing');
@@ -27,6 +31,11 @@ class HomeController extends Controller
     public function render_home_page() {
         $matchThis = ['isWorkedOut' => true];
         $songs = Song::where($matchThis)->get();
+
+        foreach ($songs as $song) {
+            $song->file = Utils::getDirectDownloadLink($song->file);
+        }
+
         return view('repertoire.home', [
             'songs' => $songs
         ]);
@@ -35,6 +44,11 @@ class HomeController extends Controller
     public function getUnworkedOutSongs() {
         $matchThis = ['isWorkedOut' => false];
         $songs = Song::where($matchThis)->get();
+
+        foreach ($songs as $song) {
+            $song->file = Utils::getDirectDownloadLink($song->file);
+        }
+
         return view('repertoire.unworkedout', [
             'songs' => $songs
         ]);
